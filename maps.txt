@@ -1,11 +1,11 @@
 addm 5300 3250 800 600 "space" Agent Room
 addm 91634 4379 8352 2400 "ainland1" Ainarda
-addm 42503 49375 1200 600 "taa1-redo" The Ancient Arch 1
-addm 43782 49377 1300 600 "taa3" The Ancient Arch 2
+addm 42503 49375 1200 600 "taa1-redo" The Ancient ArchÂ 1
+addm 43782 49377 1300 600 "taa3" The Ancient ArchÂ 2
 addm 47580 48792 2400 1200 "aquamind" Aquamind
 addm 14417 7234 1800 1400 "an30" Aquanornia
 addm 10102 6523 3896 3476 "ROOM-final stages.BLG.2" Aquatilis Caverna
-addm 10570 3122 3424 3364 "ACback2" Aquatilis Caverna 2
+addm 10570 3122 3424 3364 "ACback2" Aquatilis CavernaÂ 2
 addm 20357 31714 1024 768 "acpodbg1" Aquatilis Pod
 addm 41090 48910 1412 1060 "1414-X back" Aquatopia
 addm 74539 55000 4000 1200 "artemia_sea" Artemia Sea
@@ -14,7 +14,7 @@ addm 0 12000 2000 1000 "as_blockroom" Blockworld Alpha
 addm 2400 20876 2152 3468 "biodome3" Biodome
 addm 2862 6700 1024 768 "borgback2" Borg room
 addm 4704 7664 2000 1000 "restartbubblecolonytest2" Bubble Colony
-addm 76 2866 6868 1652 "main3.0" Bridge & Engineering
+addm 76 2866 6868 1652 "main3.0" BridgeÂ &Â Engineering
 addm 0 10000 11520 1196 "c1back11" C1 to DS
 addm 0 47600 12448 2400 "C2toDS" C2 to DS
 addm 12207 884 1500 1124 "Charan_back" Charan
@@ -53,8 +53,8 @@ addm 7000 3000 2816 896 "ngarden2back" Norngarden 2
 addm 9200 0 800 600 "ng2a" Norngarden Hub
 *location varies if other NG metarooms are installed!* Norngarden 4
 addm 5900 9300 800 600 "ngx" Norngarden Xmas
-addm 1605 48984 1000 1000 "tutorial room copy2" Nornhulu room 1
-addm 19 48482 1500 1500 "norhulu room" Nornhulu room 2
+addm 1605 48984 1000 1000 "tutorial room copy2" NornhuluÂ room 1
+addm 19 48482 1500 1500 "norhulu room" NornhuluÂ room 2
 addm 1700 4550 1600 600 "nursery" The Nursery
 addm 0 46024 1576 1576 "moe_Oasis" Oasis
 addm 5640 7433 2940 1204 "iceventurabg3" Ostrova
@@ -63,7 +63,7 @@ addm 46750 94114 1068 836 "Past_Seas-v10" Past Seas
 addm 94029 935 1136 884 "pearlhome" Pearl Ocean
 addm 6740 4550 800 600 "space" Photo Room
 addm 7220 670 796 596 "pinball2" Pinball
-addm 91958 33 3200 900 "primordia2" Primordia v2
+addm 91958 33 3200 900 "primordia2" PrimordiaÂ v2
 addm 8000 4000 1536 1280 "Droom2" Random's Room
 addm 28500 10001 800 840 "RonsHouse" Ron's House
 addm 0 13100 1600 600 "as_scribble_background" Scribble Room
@@ -78,11 +78,11 @@ addm 7836 8606 1024 676 "abyssvers3" The Abyss
 addm 38616 1310 4608 1792 "BansheeBridgeGreen" The Banshee Ship
 addm 19900 10000 8388 1188 "buro" The Burrows
 addm 5670 5900 2048 1344 "Cp 1" The Canopy
-addm 4952 4551 952 600 "COH" The Canopy Cave
+addm 4952 4551 952 600 "COH" The CanopyÂ Cave
 addm 12502 48260 1388 1040 "hub_1" The Hub
 addm 11754 4353 1748 1748 "tehisland" The Island
 addm 0 20000 1940 876 "lostcave" The Lost Cave
-addm 3312 5994 1134 850 "mmc" The Mermaid Caves 0.9
+addm 3312 5994 1134 850 "mmc" The Mermaid CavesÂ 0.9
 addm 0 4600 3200 1200 "pole" The North Pole
 addm 3296 8739 800 600 "transporteroomnew2" Transporter Room
 addm 3300 4600 1620 990 "Tropics" Tropics
