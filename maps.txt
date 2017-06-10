@@ -1,6 +1,5 @@
 addm 5300 3250 800 600 "space" Agent Room
 addm 91634 4379 8352 2400 "ainland1" Ainarda
-addm 42503 49375 1200 600 "taa1-redo" The Ancient Arch 1
 addm 43782 49377 1300 600 "taa3" The Ancient Arch 2
 addm 47580 48792 2400 1200 "aquamind" Aquamind
 addm 14417 7234 1800 1400 "an30" Aquanornia
@@ -10,7 +9,6 @@ addm 20357 31714 1024 768 "acpodbg1" Aquatilis Pod
 addm 41090 48910 1412 1060 "1414-X back" Aquatopia
 addm 74539 55000 4000 1200 "artemia_sea" Artemia Sea
 addm 4100 7600 1120 1008 "Templeroom" Bug's Temple
-addm 0 12000 2000 1000 "as_blockroom" Blockworld Alpha
 addm 2400 20876 2152 3468 "biodome3" Biodome
 addm 2862 6700 1024 768 "borgback2" Borg room
 addm 4704 7664 2000 1000 "restartbubblecolonytest2" Bubble Colony
@@ -93,7 +91,9 @@ addm 49161 48175 800 600 "zaharo" Zaharo
 addm 3208 9388 800 600 "space" DS Dummy Agent Room
 addm 7210 29 800 600 "space" C3 Dummy Agent Room
 addm 4145 1252 400 300 "blank" C3 blank
+addm 0 12000 2000 1000 "as_blockroom" Blockworld Alpha
 addm 19153 4 1328 1300 "gp_junglev2" GP Jungle
 addm 21280 2977 1500 812 "gp_deserthideout" GP Desert
 addm 23367 0 2852 2088 "gp_meso" GP Meso
 addm 20483 0 2872 2976 "gp_mainworld" GP Main
+addm 42503 49375 1200 600 "taa1-redo" The Ancient Arch 1
