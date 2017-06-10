@@ -51,7 +51,6 @@ addm 0 0 4112 1300 "norn3.0" Norn Terrarium
 addm 6950 8900 1920 1024 "ngardenback" Norngarden 1
 addm 7000 3000 2816 896 "ngarden2back" Norngarden 2
 addm 9200 0 800 600 "ng2a" Norngarden Hub
-*location varies if other NG metarooms are installed!* Norngarden 4
 addm 5900 9300 800 600 "ngx" Norngarden Xmas
 addm 1605 48984 1000 1000 "tutorial room copy2" Nornhulu room 1
 addm 19 48482 1500 1500 "norhulu room" Nornhulu room 2
