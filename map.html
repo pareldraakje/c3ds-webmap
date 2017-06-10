@@ -2,7 +2,7 @@
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <style>
-body { position: relative; top: 0; left: 0;}
+body { position: relative; top: 0; left: 0; font-size: 1em;}
 #parent {
 	position: relative;
 	top: 0;
@@ -50,7 +50,6 @@ b {
 <script>
 jQuery.get('https://raw.githubusercontent.com/pareldraakje/c3ds-webmap/master/maps.txt', function(txt) {
  
- console.log("Data: " + txt + "\n");
  var lines = String(txt).split('\n');
  
  var tempstr = "";
