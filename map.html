@@ -2,7 +2,7 @@
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <style>
-body { position: relative; top: 0; left: 0; font-size: 1em;}
+body { position: relative; top: 0; left: 0; font-size: 1em; margin: 0px; padding: 0px;}
 #parent {
 	position: relative;
 	top: 0;
@@ -79,10 +79,8 @@ jQuery.get('https://raw.githubusercontent.com/pareldraakje/c3ds-webmap/master/ma
  divposb = parseInt(tempstr[1]) + parseInt(tempstr[3]);
  divposr = parseInt(tempstr[2]) + parseInt(tempstr[4]);
  
- divstr = "<div id=\"" + divname + "\" ><p>" + divname + "</p><span><p>" + divname + "<br>" + divposx*100 + " " + divposr + "<br>" + divposy*100 + " " + divposb + "</p></span></div>";
+ divstr = "<div id=\"" + divname + "\" ><p>" + divname + "</p><span><p>" + divname + "<br>" + parseInt(divposx*10) + " " + parseInt(divposr) + "<br>" + parseInt(divposy*10) + " " + parseInt(divposb) + "</p></span></div>";
  $("#parent").append(divstr);
- 
- divstr2 = "<p>" + divname + " - posl: " + divposx + ", posr: " + divposr + ", post: " + divposy + ", posb: " + divposb + "</p>";
  $('div#' + divname).css({"position": "absolute","left": divposx,"top": divposy,"width": divwidth,"height": divheight});
  /*$('div.' + divname).css();*/
 }
