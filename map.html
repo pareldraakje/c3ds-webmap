@@ -1,0 +1,77 @@
+
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<style>
+#parent {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100000px;
+	height: 100000px;
+	zoom: 0.05;
+	font-size: 200pt;
+	text-align: center;
+	}
+	p {
+	line-height: 100%;
+	}
+#parent div {
+	border: 5px solid black;
+	}
+#parent div:hover {
+	background-color: white;
+	z-index: 100
+	}
+</style>
+</head>
+
+<body>
+<div id="parent">
+</div>
+<p id="list">
+</div>
+
+<script>
+jQuery.get('https://raw.githubusercontent.com/pareldraakje/c3ds-webmap/master/maps.txt', function(txt) {
+ 
+ console.log("Data: " + txt + "\n");
+ var lines = String(txt).split('\n');
+ 
+ var tempstr = "";
+ var divposx = 0;
+ var divposy = 0;
+ var divwidth = 0;
+ var divheight = 0;
+ var divposb = 0;
+ var divposr = 0;
+ var divname = "flib";
+ var divstr = "";
+ var divstr2 = "";
+ 
+ for (var i = 0, len = lines.length; i < len; i++) {
+ 
+ console.log("Data: " + lines[i] + "\n");
+ tempstr = lines[i].split(" ", 6);
+ divposx = tempstr[1] + "px";
+ divposy = tempstr[2] + "px";
+ divwidth = tempstr[3] + "px";
+ divheight = tempstr[4] + "px";
+ divname = tempstr[5].replace(/[^a-zA-Z 0-9]+/g, '');
+ divposb = parseInt(tempstr[1]) + parseInt(tempstr[3]);
+ divposb += "px";
+ divposr = parseInt(tempstr[2]) + parseInt(tempstr[4]);
+ divposr += "px";
+ 
+ divstr = "<div id=\"" + divname + "\" >" + divname + "<br>" + divposx + " " + divposr + "<br>" + divposy + " " + divposb + "</div>";
+ $("#parent").append(divstr);
+ 
+ divstr2 = "<p>" + divname + " - posl: " + divposx + ", posr: " + divposr + ", post: " + divposy + ", posb: " + divposb + "</p>";
+ $('div#' + divname).css({"position": "absolute","left": divposx,"top": divposy,"width": divwidth,"height": divheight});
+
+}
+
+});
+</script>
+</body>
+
+
