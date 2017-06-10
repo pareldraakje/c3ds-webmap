@@ -15,11 +15,34 @@
 	p {
 	line-height: 100%;
 	}
-#parent div {
+#parent > div {
 	border: 5px solid black;
 	}
-#parent div:hover {
+#parent > div > p {
 	background-color: white;
+	font-size: 100pt;
+}
+
+#parent div > span b {
+	font-size: 200pt;
+}
+#parent div > span p {
+	background-color: #fafafa;
+}
+
+#parent div > span {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-top: -800px;
+	margin-left: -400px;
+	text-align: center;
+	display: none;
+}
+	
+#parent div:hover span {
+	display: block;
+	zoom: 4;
 	z-index: 100
 	}
 </style>
@@ -62,7 +85,7 @@ jQuery.get('https://raw.githubusercontent.com/pareldraakje/c3ds-webmap/master/ma
  divposr = parseInt(tempstr[2]) + parseInt(tempstr[4]);
  divposr += "px";
  
- divstr = "<div id=\"" + divname + "\" >" + divname + "<br>" + divposx + " " + divposr + "<br>" + divposy + " " + divposb + "</div>";
+ divstr = "<div id=\"" + divname + "\" ><p>" + divname + "</p><span><p>" + divname + "<br>" + divposx + " " + divposr + "<br>" + divposy + " " + divposb + "</p></span></div>";
  $("#parent").append(divstr);
  
  divstr2 = "<p>" + divname + " - posl: " + divposx + ", posr: " + divposr + ", post: " + divposy + ", posb: " + divposb + "</p>";
