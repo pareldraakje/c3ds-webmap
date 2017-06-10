@@ -2,50 +2,40 @@
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <style>
+body { position: relative; top: 0; left: 0;}
 #parent {
-	position: absolute;
+	position: relative;
 	top: 0;
 	left: 0;
-	width: 100000px;
-	height: 100000px;
-	-webkit-transform: scale(0.05,0.05);
-	-moz-transform: scale(0.05,0.05);
-	-o-transform: scale(0.05,0.05);
-	transform: scale(0.05,0.05);
-	font-size: 200pt;
+	width: 10000px;
+	height: 10000px;
 	text-align: center;
 	}
 	p {
 	line-height: 100%;
 	}
 #parent > div {
-	border: 5px solid black;
+	border: 1px solid black;
 	}
-#parent > div > p {
-	background-color: white;
-	font-size: 100pt;
-}
-
-#parent div > span b {
-	font-size: 200pt;
-}
-#parent div > span p {
-	background-color: #fafafa;
-}
 
 #parent div > span {
 	position: fixed;
+	width: 400px;
+	height: 200px;
 	top: 50%;
 	left: 50%;
-	margin-top: -800px;
-	margin-left: -400px;
+	margin-left: -200px;
+	margin-top: -100px;
 	text-align: center;
-	display: none;
+	font-size: 2em;
+	display: none; 
 }
-	
+b {
+	font-size: 3em;
+}
 #parent div:hover span {
 	display: block;
-	zoom: 4;
+	background-color: #fefefe;
 	z-index: 100
 	}
 </style>
@@ -78,22 +68,24 @@ jQuery.get('https://raw.githubusercontent.com/pareldraakje/c3ds-webmap/master/ma
  
  console.log("Data: " + lines[i] + "\n");
  tempstr = lines[i].split(" ", 6);
- divposx = tempstr[1] + "px";
- divposy = tempstr[2] + "px";
- divwidth = tempstr[3] + "px";
- divheight = tempstr[4] + "px";
+ divposx = tempstr[1];
+ divposx *= 0.1;
+ divposy = tempstr[2];
+ divposy *= 0.1;
+ divwidth = tempstr[3];
+ divwidth *= 0.1;
+ divheight = tempstr[4];
+ divheight *= 0.1
  divname = tempstr[5].replace(/[^a-zA-Z 0-9]+/g, '');
  divposb = parseInt(tempstr[1]) + parseInt(tempstr[3]);
- divposb += "px";
  divposr = parseInt(tempstr[2]) + parseInt(tempstr[4]);
- divposr += "px";
  
- divstr = "<div id=\"" + divname + "\" ><p>" + divname + "</p><span><p>" + divname + "<br>" + divposx + " " + divposr + "<br>" + divposy + " " + divposb + "</p></span></div>";
+ divstr = "<div id=\"" + divname + "\" ><p>" + divname + "</p><span><p>" + divname + "<br>" + divposx*100 + " " + divposr + "<br>" + divposy*100 + " " + divposb + "</p></span></div>";
  $("#parent").append(divstr);
  
  divstr2 = "<p>" + divname + " - posl: " + divposx + ", posr: " + divposr + ", post: " + divposy + ", posb: " + divposb + "</p>";
  $('div#' + divname).css({"position": "absolute","left": divposx,"top": divposy,"width": divwidth,"height": divheight});
-
+ /*$('div.' + divname).css();*/
 }
 
 });
