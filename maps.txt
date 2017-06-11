@@ -97,3 +97,5 @@ addm 21280 2977 1500 812 "gp_deserthideout" GP Desert
 addm 23367 0 2852 2088 "gp_meso" GP Meso
 addm 20483 0 2872 2976 "gp_mainworld" GP Main
 addm 42503 49375 1200 600 "taa1-redo" The Ancient Arch 1
+addm 0 5800 2816 896 "ng4" Norngarden 4
+addm 0 11197 11520 2400 "C2back" C2toDS Geat Masta
