@@ -63,7 +63,7 @@ jQuery.get('https://raw.githubusercontent.com/pareldraakje/c3ds-webmap/master/ma
  var divstr = "";
  var divstr2 = "";
  
- for (var i = 0, len = lines.length; i < len; i++) {
+ for (var i = 0, len = lines.length; i+1 < len; i++) {
  
  console.log("Data: " + lines[i] + "\n");
  tempstr = lines[i].split(" ", 6);
