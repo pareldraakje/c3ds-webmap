@@ -52,6 +52,7 @@ jQuery.get('https://raw.githubusercontent.com/pareldraakje/c3ds-webmap/master/ma
  var lines = String(txt).split('\n');
  
  var tempstr = "";
+ var tempstr2 = "";
  var divposx = 0;
  var divposy = 0;
  var divwidth = 0;
@@ -59,13 +60,14 @@ jQuery.get('https://raw.githubusercontent.com/pareldraakje/c3ds-webmap/master/ma
  var divposb = 0;
  var divposr = 0;
  var divname = "flib";
+ var divname2 = "flib";
  var divstr = "";
  var divstr2 = "";
  
  for (var i = 0, len = lines.length; i+1 < len; i++) {
  
  console.log("Data: " + lines[i] + "\n");
- tempstr = lines[i].split(" ", 7);
+ tempstr = lines[i].split(" ");
  divposx = tempstr[1];
  divposx *= 0.1;
  divposy = tempstr[2];
@@ -74,11 +76,13 @@ jQuery.get('https://raw.githubusercontent.com/pareldraakje/c3ds-webmap/master/ma
  divwidth *= 0.1;
  divheight = tempstr[4];
  divheight *= 0.1
- divname = tempstr[5].replace(/[^a-zA-Z 0-9]+/g, '');
+ tempstr2 = tempstr[].slice(4);
+ divname = tempstr2.join();
+ divname2 = divname.replace(/[^a-zA-Z 0-9]+/g, '');
  divposr = parseInt(tempstr[1]) + parseInt(tempstr[3]);
  divposb = parseInt(tempstr[2]) + parseInt(tempstr[4]);
 
- divstr = "<div id=\"" + divname + "\" ><p>" + divname + "</p><span><p>" + divname + "<br>" + parseInt(divposx*10) + " " + parseInt(divposr) + "<br>" + parseInt(divposy*10) + " " + parseInt(divposb) + "</p></span></div>";
+ divstr = "<div id=\"" + divname + "\" ><p>" + divname + "</p><span><p>" + divname2 + "<br>" + parseInt(divposx*10) + " " + parseInt(divposr) + "<br>" + parseInt(divposy*10) + " " + parseInt(divposb) + "</p></span></div>";
  $("#parent").append(divstr);
  $('div#' + divname).css({"position": "absolute","left": divposx,"top": divposy,"width": divwidth,"height": divheight});
  /*$('div.' + divname).css();*/
