@@ -61,6 +61,9 @@ jQuery.get('https://raw.githubusercontent.com/pareldraakje/c3ds-webmap/master/ma
  var divname = "flib";
  var divstr = "";
  var divstr2 = "";
+ var startchar = 0;
+ var endchar = 0;
+ var divtext = "";
  
  for (var i = 0, len = lines.length; i+1 < len; i++) {
  
@@ -74,11 +77,20 @@ jQuery.get('https://raw.githubusercontent.com/pareldraakje/c3ds-webmap/master/ma
  divwidth *= 0.1;
  divheight = tempstr[4];
  divheight *= 0.1
+ 
  divname = tempstr[5].replace(/[^a-zA-Z 0-9]+/g, '');
+ 
+ var m = lines[i].indexOf("\"");
+ var n = lines[i].indexOf("\"", m+1);
+ startchar = lines[i].indexOf("\"", n+1);
+ endchar = lines[i].indexOf("\"", startchar+1);
+ 
+ divtext = lines[i].substr(startchar+1, endchar).replace(/[^a-zA-Z 0-9.]+/g, '');
+ 
  divposr = parseInt(tempstr[1]) + parseInt(tempstr[3]);
  divposb = parseInt(tempstr[2]) + parseInt(tempstr[4]);
 
- divstr = "<div id=\"" + divname + "\" ><p>" + divname + "</p><span><p>" + divname + "<br>" + parseInt(divposx*10) + " " + parseInt(divposr) + "<br>" + parseInt(divposy*10) + " " + parseInt(divposb) + "</p></span></div>";
+ divstr = "<div id=\"" + divname + "\" ><p>" + divtext + "</p><span><p>" + divtext + "<br>" + parseInt(divposx*10) + " " + parseInt(divposr) + "<br>" + parseInt(divposy*10) + " " + parseInt(divposb) + "</p></span></div>";
  $("#parent").append(divstr);
  $('div#' + divname).css({"position": "absolute","left": divposx,"top": divposy,"width": divwidth,"height": divheight});
  /*$('div.' + divname).css();*/
