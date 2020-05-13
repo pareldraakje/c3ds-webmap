@@ -106,4 +106,4 @@ addm 0 5800 2816 896 "ng4" "Norngarden 4"
 addm 212 17387 1024 1024 "room2" "Boneyard room 2"
 addm 1251 17313 1300 1300 "boneyardEditagain" "Boneyard room 1"
 addm 60034 8849 1452 1352 "testingroom" "Testing Room"
-
+addm 26342 0 2280 1396 "FixupRoom" "Fixup Metaroom"
